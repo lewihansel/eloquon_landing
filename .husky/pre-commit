@@ -1,0 +1,28 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo 'Checking your code before committing...'
+
+# Check Type Validity (TypeScript)
+echo 'Checking the types validity... 🧐🧐🧐'
+npm run check:ts || (
+    echo 'Types validity check failed! Please fix any types error before committing!';
+    false;
+)
+
+# Linting
+echo 'Linting... 🚬🚬🚬'
+npm run check:lint || (
+    echo 'ESLint check failed! Please fix all the error above before commiting!';
+    false;
+)
+
+# Checking How Pretty your code 💄😍
+echo 'Checking how pretty your code is 💅🏻💋😘'
+npm run check:format || (
+    echo 'Prettier check failed! Please run `npm run format` before commiting!';
+    false;
+)
+
+echo 'All check passed! 💪🏻💪🏻💪🏻'
+echo 'Commiting... 🙈🙈🙈'

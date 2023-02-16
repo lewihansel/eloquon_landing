@@ -1,0 +1,24 @@
+{
+    "extends": [
+        "prettier",
+        "next/core-web-vitals",
+        "plugin:import/typescript",
+        "plugin:import/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "tsconfigRootDir": ".",
+        "project": ["tsconfig.json"]
+    },
+    "ignorePatterns": ["next.config.js"],
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [".js", ".jsx", ".ts", ".tsx"],
+                "moduleDirectory": ["."]
+            }
+        }
+    }
+}

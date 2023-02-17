@@ -1,100 +1,55 @@
-import Image from "next/image"
-import { Inter } from "@next/font/google"
-import styles from "./page.module.css"
-
-const inter = Inter({ subsets: ["latin"] })
+"use client"
+import { CaretDown } from "phosphor-react"
 
 export default function Home() {
     return (
-        <main className={styles.main}>
-            <div className={styles.description}>
-                <p>
-                    Get started by editing&nbsp;
-                    <code className={styles.code}>app/page.tsx</code>
-                </p>
+        <main>
+            {/* Navbar */}
+            <div className="fixed flex h-20 w-screen items-center justify-between px-20">
                 <div>
-                    <a
-                        href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        By{" "}
-                        <Image
-                            src="/vercel.svg"
-                            alt="Vercel Logo"
-                            className={styles.vercelLogo}
-                            width={100}
-                            height={24}
-                            priority
-                        />
-                    </a>
-                </div>
-            </div>
-
-            <div className={styles.center}>
-                <Image
-                    className={styles.logo}
-                    src="/next.svg"
-                    alt="Next.js Logo"
-                    width={180}
-                    height={37}
-                    priority
-                />
-                <div className={styles.thirteen}>
-                    <Image
-                        src="/thirteen.svg"
-                        alt="13"
-                        width={40}
-                        height={31}
-                        priority
+                    <img
+                        className="w-full max-w-[140px]"
+                        src="/logo/eloquon_logo.svg"
+                        alt="Eloquon Logo"
                     />
                 </div>
+                <div className="flex w-fit text-light-green-500">
+                    <button className="flex items-center gap-1 p-3">
+                        Individual <CaretDown size="12" />
+                    </button>
+                    <button className="flex items-center gap-1 p-3">
+                        Corporate <CaretDown size="12" />
+                    </button>
+                    <button className="flex items-center gap-1 p-3">
+                        Articles <CaretDown size="12" />
+                    </button>
+                    <button className="flex items-center gap-1 p-3">
+                        About Us
+                    </button>
+                </div>
             </div>
 
-            <div className={styles.grid}>
-                <a
-                    href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-                    className={styles.card}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <h2 className={inter.className}>
-                        Docs <span>-&gt;</span>
+            {/* Hero */}
+            <div className="flex h-screen w-full items-center justify-between gap-16 py-20 px-20">
+                <div className="max-w-xl">
+                    <h2 className="mb-5 text-5xl font-bold leading-snug text-deep-orange-500">
+                        Professional English Bootcamp
                     </h2>
-                    <p className={inter.className}>
-                        Find in-depth information about Next.js features and
-                        API.
+                    <p className="mb-8 text-xl leading-normal">
+                        Good command of English is a critical skill when it
+                        comes to working for top consulting, multinational and
+                        tech companies.
                     </p>
-                </a>
+                    <button className="rounded-full bg-deep-orange-500 px-5 py-2 text-lg">
+                        Start Learning
+                    </button>
+                </div>
 
-                <a
-                    href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-                    className={styles.card}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <h2 className={inter.className}>
-                        Templates <span>-&gt;</span>
-                    </h2>
-                    <p className={inter.className}>
-                        Explore the Next.js 13 playground.
-                    </p>
-                </a>
-
-                <a
-                    href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-                    className={styles.card}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <h2 className={inter.className}>
-                        Deploy <span>-&gt;</span>
-                    </h2>
-                    <p className={inter.className}>
-                        Instantly deploy your Next.js site to a shareable URL
-                        with Vercel.
-                    </p>
-                </a>
+                <img
+                    className="aspect-[4/3] w-[36vw] rounded-3xl object-cover"
+                    src="https://images.pexels.com/photos/2422280/pexels-photo-2422280.jpeg?auto=compress"
+                    alt=""
+                />
             </div>
         </main>
     )

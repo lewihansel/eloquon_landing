@@ -7,6 +7,9 @@
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking"
     ],
+    "rules": {
+        "@next/next/no-img-element": "off"
+    },
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "tsconfigRootDir": ".",
